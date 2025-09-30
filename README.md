@@ -182,10 +182,14 @@ This line goes into your **Dockerfile** and tells Docker **what command to run w
 ### 6. 🌍 Access the API
 
 * Uvicorn runs the server at:
-  👉 [http://0.0.0.0:8000](http://0.0.0.0:8000)
+  👉 [http://127.0.0.1:8000/](http://127.0.0.1:8000/) or [http://localhost:8000](http://localhost:8000)
+
+<img width="417" height="115" alt="image" src="https://github.com/user-attachments/assets/7216fdf1-143e-4b0c-8255-1a4021f4947f" />
 
 * FastAPI docs available at:
-  👉 [http://0.0.0.0:8000/docs](http://0.0.0.0:8000/docs)
+  👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) or [http://localhost:8000/docs](http://localhost:8000/docs)
+
+<img width="1742" height="651" alt="image" src="https://github.com/user-attachments/assets/370e4fc5-5bac-4989-988a-79c16ff3e430" />
 
 Here you can test the **POST API** by sending flower feature inputs.
 
@@ -205,6 +209,8 @@ Here you can test the **POST API** by sending flower feature inputs.
 }
 ```
 
+<img width="1142" height="851" alt="image" src="https://github.com/user-attachments/assets/e9c0d06c-5dbf-49ea-8b6f-2a024c206d6c" />
+
 ---
 
 ### 7. 🤖 Automating Predictions
@@ -212,12 +218,18 @@ Here you can test the **POST API** by sending flower feature inputs.
 Use `client.py` to send multiple flower features in bulk.
 The script loops through the input list, sends requests to the API, and prints predictions automatically.
 
+<img width="520" height="579" alt="image" src="https://github.com/user-attachments/assets/8917aa40-18cc-4fa5-a718-b120f03fb704" />
+
+*client.py*
+
+<img width="1091" height="42" alt="image" src="https://github.com/user-attachments/assets/935b0b38-525f-4d3d-8510-3a9f69ebb59a" />
+
 ---
 
 ## 🧪 Testing the Workflow
 
 1. Run the Docker container.
-2. Open [http://0.0.0.0:8000/docs](http://0.0.0.0:8000/docs).
+2. Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 3. Try out the endpoints:
 
    * GET → Health check.
@@ -241,12 +253,3 @@ The script loops through the input list, sends requests to the API, and prints p
 * Extend to handle more datasets & models.
 
 ---
-
-### 💡 Quick Start
-
-1. Clone repo → `git clone <repo_url>`
-2. Build Docker image → `docker build -t iris-fastapi .`
-3. Run → `docker run -p 8000:8000 iris-fastapi`
-4. Test at → [http://0.0.0.0:8000/docs](http://0.0.0.0:8000/docs)
-
-🌸 Enjoy predicting Iris flowers with ML + FastAPI + Docker!
