@@ -51,6 +51,10 @@ The model predicts **Iris flower species** based on input features:
 * Train a **Random Forest Classifier** on the Iris dataset.
 * Save the trained model as `model.joblib` using `joblib.dump()`.
 
+<img width="412" height="276" alt="image" src="https://github.com/user-attachments/assets/741e301d-6836-4f1a-a2e4-ad0d43a026d8" />
+
+*joblib_file_creator.ipynb*
+
 ---
 
 ### 2. 🖥️ Build the API
@@ -61,6 +65,10 @@ The model predicts **Iris flower species** based on input features:
 
   * ✅ **GET endpoint** → simple health check / welcome message.
   * ✅ **POST endpoint** → accepts flower features & returns predicted species.
+
+<img width="542" height="572" alt="image" src="https://github.com/user-attachments/assets/bd26f752-db7c-4c81-9bdb-8e6b1331ccf5" />
+
+*server.py*
 
 ---
 
@@ -92,6 +100,10 @@ joblib
    CMD ["uvicorn", "app.server:app", "--host", "0.0.0.0", "--port", "8000"]
    ```
 
+<img width="573" height="254" alt="image" src="https://github.com/user-attachments/assets/c43db7bd-8f1c-4adb-84c2-48dfeee0bdf6" />
+
+*Dockerfile*
+
 ---
 
 ### 5. 🔨 Build & Run Docker
@@ -112,10 +124,10 @@ joblib
 ### 6. 🌍 Access the API
 
 * Uvicorn runs the server at:
-  👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
+  👉 [http://0.0.0.0:8000](http://0.0.0.0:8000)
 
 * FastAPI docs available at:
-  👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+  👉 [http://0.0.0.0:8000/docs](http://0.0.0.0:8000/docs)
 
 Here you can test the **POST API** by sending flower feature inputs.
 
@@ -147,7 +159,7 @@ The script loops through the input list, sends requests to the API, and prints p
 ## 🧪 Testing the Workflow
 
 1. Run the Docker container.
-2. Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
+2. Open [http://0.0.0.0:8000/docs](http://0.0.0.0:8000/docs).
 3. Try out the endpoints:
 
    * GET → Health check.
@@ -177,6 +189,6 @@ The script loops through the input list, sends requests to the API, and prints p
 1. Clone repo → `git clone <repo_url>`
 2. Build Docker image → `docker build -t iris-fastapi .`
 3. Run → `docker run -p 8000:8000 iris-fastapi`
-4. Test at → [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+4. Test at → [http://0.0.0.0:8000/docs](http://0.0.0.0:8000/docs)
 
 🌸 Enjoy predicting Iris flowers with ML + FastAPI + Docker!
