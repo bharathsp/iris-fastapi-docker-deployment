@@ -17,6 +17,8 @@ The model predicts **Iris flower species** based on input features:
 * Expose the model via **REST APIs** built using **FastAPI**.
 * Containerize the application with **Docker** for easy deployment.
 
+<img width="1011" height="141" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/5e293cbb-b3cb-458d-b43e-85906c8672de" />
+
 ---
 
 ## 🛠️ Tools & Technologies
